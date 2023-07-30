@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="TaskTableViewCell" customModule="Sakaly" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="todo" translatesAutoresizingMaskIntoConstraints="NO" id="PSJ-p2-5Q7">
+                        <rect key="frame" x="16" y="25.666666666666671" width="39" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="G9A-MV-6Lr"/>
+                            <constraint firstAttribute="width" constant="39" id="u34-IA-DKy"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FG4-KR-FLS">
+                        <rect key="frame" x="91" y="27.000000000000004" width="110.66666666666669" height="32.333333333333343"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnN-SM-edt">
+                                <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.87980973640000004" green="0.53653805269999999" blue="0.8886585884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The notes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzw-fY-VQL">
+                                <rect key="frame" x="0.0" y="18" width="57" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.35294118520000001" green="0.1411764771" blue="0.47058826679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVR-e0-h1h">
+                        <rect key="frame" x="279" y="31" width="22" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="1S6-jE-rSf"/>
+                            <constraint firstAttribute="height" constant="24" id="52D-ln-ZLb"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="deleteIcon"/>
+                        <connections>
+                            <action selector="deleteBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jkz-OC-Zgx"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="PSJ-p2-5Q7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25.666666666666671" id="B1q-qy-LWe"/>
+                    <constraint firstItem="PSJ-p2-5Q7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="EM2-bT-xmq"/>
+                    <constraint firstItem="FG4-KR-FLS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Jf5-oD-PGN"/>
+                    <constraint firstItem="FG4-KR-FLS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="Oqs-am-gJM"/>
+                    <constraint firstAttribute="trailing" secondItem="QVR-e0-h1h" secondAttribute="trailing" constant="19" id="YVV-i2-HGj"/>
+                    <constraint firstAttribute="trailing" secondItem="FG4-KR-FLS" secondAttribute="trailing" constant="118.33333333333331" id="hNC-LJ-7XD"/>
+                    <constraint firstItem="PSJ-p2-5Q7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iJC-st-Zh4"/>
+                    <constraint firstAttribute="bottom" secondItem="QVR-e0-h1h" secondAttribute="bottom" constant="30" id="iXv-LP-ph1"/>
+                    <constraint firstItem="FG4-KR-FLS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="91" id="r1l-D6-oUO"/>
+                    <constraint firstItem="QVR-e0-h1h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="u6c-tV-XEa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="dateAndTimeLabel" destination="SnN-SM-edt" id="6Jr-5G-QB5"/>
+                <outlet property="taskImageView" destination="PSJ-p2-5Q7" id="xRi-Vf-XZS"/>
+                <outlet property="taskLabel" destination="pzw-fY-VQL" id="MyV-Jx-QpQ"/>
+            </connections>
+            <point key="canvasLocation" x="42.748091603053432" y="33.450704225352112"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="deleteIcon" width="14" height="20"/>
+        <image name="todo" width="152" height="152"/>
+    </resources>
+</document>
